@@ -23,11 +23,9 @@ class Login extends CI_Controller {
 	{
 		$username = $this->input->post("username");
 		$password = $this->input->post("password") ; 
-		$deviceid = $this->input->post("deviceid") ; 
 		if ( $this->login_m->login_aksi($username, $password) == 1 )
 		{	
 			$data		= $this->login_m->get_user_data($username,$password);
-			$cek = $this->db->query("SELECT * FROM mscomp a WHERE id_comp='".$deviceid."'")->num_rows();
 			$session_data	= array 
 			(
 				'username'		=> $data->UsrKd,
@@ -35,19 +33,8 @@ class Login extends CI_Controller {
 				'group'			=> $data->UsrGrpANo,
 				'nama'		    => $data->UsrNm,
 				'logged_in'		=> 'TRUE',
-				'print_service'	=> ($cek>0),
-				'last_notif'	=> "2000-01-01 00:00:00",
 				'date'			=> date('Y-m-d H:i:s'),
 			);
-			$tr = array(
-				'UsrANo' => $data->UsrANo,
-				'tanggal' => date('Ymd'),
-				'kode' => acak(5),
-			);
-			$q = $this->db->query("select * from traprove where UsrANo='".$data->UsrANo."' and tanggal='".date('Ymd')."'");
-			if ($q->num_rows()==0) {
-				$this->db->insert('traprove', $tr);
-			}
 
 			$this->session->set_userdata($session_data);
 			redirect("home") ; 
