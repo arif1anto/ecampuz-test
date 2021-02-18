@@ -18,3 +18,20 @@ ERROR - 2021-02-18 11:55:35 --> 404 Page Not Found --> assets
 ERROR - 2021-02-18 14:27:37 --> 404 Page Not Found --> home
 ERROR - 2021-02-18 14:28:35 --> 404 Page Not Found --> home
 ERROR - 2021-02-18 14:28:37 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 14:53:15 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 14:53:17 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 14:53:18 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 14:53:18 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 14:53:56 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 14:54:04 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 14:55:03 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 14:55:53 --> Query error: Unknown column 'foto' in 'field list'
+ERROR - 2021-02-18 14:57:19 --> Query error: Table 'ecampuz.mssetprog' doesn't exist
+ERROR - 2021-02-18 14:59:17 --> Query error: Table 'ecampuz.trlog' doesn't exist
+ERROR - 2021-02-18 15:06:35 --> 404 Page Not Found --> assets
+ERROR - 2021-02-18 15:07:52 --> Severity: Notice  --> Undefined property: stdClass::$UsrGrpANo C:\xampp\htdocs\ecampuz-test\bonus_test\application\controllers\login.php 33
+ERROR - 2021-02-18 15:07:52 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 15:09:16 --> Severity: Notice  --> Undefined property: stdClass::$UsrGrpANo C:\xampp\htdocs\ecampuz-test\bonus_test\application\controllers\login.php 33
+ERROR - 2021-02-18 15:09:16 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 15:09:33 --> 404 Page Not Found --> home
+ERROR - 2021-02-18 15:09:42 --> Severity: Notice  --> Undefined property: stdClass::$UsrGrpANo C:\xampp\htdocs\ecampuz-test\bonus_test\application\controllers\login.php 33

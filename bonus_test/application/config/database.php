@@ -48,7 +48,7 @@
 $host = "localhost"; 
 $user = "root";
 $pass = "";
-$dbnm = "test_ecampuz";
+$dbnm = "ecampuz";
 $port = "3306";
 
 $active_group = 'default';

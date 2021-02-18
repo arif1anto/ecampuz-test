@@ -5,16 +5,6 @@ function limit_words($string, $word_limit){
   return implode(" ",array_splice($words,0,$word_limit));
 }
 
-function cek_akses($akses){
-  $ci = & get_instance();
-  $user = $ci->session->userdata("user_id");
-  $query = $ci->db->query("SELECT u.UsrANo,g.UsrGrpANo,a.UsrGrpAkses AS akses FROM msuserid u 
-     LEFT JOIN msusergroup g ON u.UsrGrpANo=g.UsrGrpANo
-     LEFT JOIN msuserakses a ON a.UsrGrpANo=g.UsrGrpANo
-     WHERE u.UsrANo='$user' AND a.UsrGrpAkses='".$akses."'");
-  return ($query->num_rows()>0);
-}
-
 function cek_print($tbl, $klmp, $klm, $ref) {
     $ci = & get_instance();
     $query = $ci->db->query("SELECT $klmp print FROM $tbl WHERE $klm='$ref'")->row();
@@ -668,61 +658,6 @@ if (!function_exists('bulan_short'))
 }
 
 
-function get_token()
-{
-    $curl = curl_init();
-    $username = "qhomepro";
-    $password = "suksesmandiri96";
 
-    curl_setopt_array($curl, array(
-      CURLOPT_URL => "http://api.qhome.id/oauth_jwt",
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_ENCODING => "",
-      CURLOPT_MAXREDIRS => 10,
-      CURLOPT_TIMEOUT => 0,
-      CURLOPT_FOLLOWLOCATION => true,
-      CURLOPT_USERPWD => $username . ":" . $password,
-      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-      CURLOPT_CUSTOMREQUEST => "POST",
-      CURLOPT_HTTPHEADER => array(
-        "X-QH: wX0EtKTEbA3nR85MUzdOc0CqdlF1ORS1DRqICHIG3Ny2t-TwuwPD4942tb5U0f-RD58FiGOFIbIfPmA8jXSwipip7Z_zx-_450efUNVPl7KPZx3hZ5_LNw~~"
-        ),
-  ));
-
-    $response = curl_exec($curl);
-
-    curl_close($curl);
-    return $response;
-}
-
-function get_api($url,$param,$token,$method = "GET")
-{
-    $param = http_build_query($param);
-    $curl = curl_init();
-    curl_setopt_array($curl, array(
-      CURLOPT_URL => "$url".($method=="GET"?"?$param":""),
-      CURLOPT_RETURNTRANSFER => true,
-      CURLOPT_ENCODING => "",
-      CURLOPT_MAXREDIRS => 10,
-      CURLOPT_TIMEOUT => 0,
-      CURLOPT_FOLLOWLOCATION => true,
-      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-      CURLOPT_CUSTOMREQUEST => $method,
-      CURLOPT_HTTPHEADER => array(
-        "X-QH: wX0EtKTEbA3nR85MUzdOc0CqdlF1ORS1DRqICHIG3Ny2t-TwuwPD4942tb5U0f-RD58FiGOFIbIfPmA8jXSwipip7Z_zx-_450efUNVPl7KPZx3hZ5_LNw~~",
-        "Authorization: Bearer $token",
-        "Content-Type: application/x-www-form-urlencoded"
-        ),
-    ));
-
-    if ($method=="POST") {
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $param);
-    }
-
-    $response = curl_exec($curl);
-
-    curl_close($curl);
-    return $response;
-}
 
 ?>

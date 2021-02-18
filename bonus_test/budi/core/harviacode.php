@@ -16,10 +16,10 @@ class Harviacode
 
     function connection()
     {
-        $this->host = '192.168.3.2';
-        $this->user = 'bbmi';
-        $this->password = 'suksesmandiri96';
-        $this->database = 'test_qhomepro';
+        $this->host = 'localhost';
+        $this->user = 'root';
+        $this->password = '';
+        $this->database = 'ecampuz';
 
 
         $this->sql = new mysqli($this->host, $this->user, $this->password, $this->database);

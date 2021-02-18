@@ -6,11 +6,11 @@
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/dist/css/AdminLTE.css">
 <link rel="stylesheet" href="<?php echo base_url(); ?>assets/plugins/iCheck/square/blue.css">
 
-<title>QHOMEPRO</title>
+<title>ECampuz Test</title>
 <body class="hold-transition login-page">
   <div class="login-box">
     <div class="login-logo">
-      <a href="#">QHOMEPRO</a>
+      <a href="#">ECampuz Test</a>
     </div>
     <div class="login-box-body">
       <p class="login-box-msg">Sign in to start your session</p>
@@ -31,8 +31,7 @@
       </div>
     </div>
     <div class="login-box-footer">
-      <p class="text-center no-margin"><strong>Copyright <span class="cl">&copy;</span> <?= date('Y') ?> <a href="#">TIM IT</a></strong></p>
-      <p class="text-center no-margin"><strong><a href="#">PT. Bangunan Jaya Mandiri (Qhomemart)</a></strong></p>
+      <p class="text-center no-margin"><strong>Copyright <span class="cl">&copy;</span> <?= date('Y') ?></p>
       <p class="text-center">All rights reserved.<span id="deviceid" style="display: none;"></span></p>
     </div>
 

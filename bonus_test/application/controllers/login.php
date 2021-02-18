@@ -14,7 +14,7 @@ class Login extends CI_Controller {
 	{
 		if ($this->session->userdata('logged_in') == 'TRUE')
 		{
-			redirect('home');
+			redirect('instansi');
 		}
 		$this->load->view("login/login"); 
 	}
@@ -37,7 +37,7 @@ class Login extends CI_Controller {
 			);
 
 			$this->session->set_userdata($session_data);
-			redirect("home") ; 
+			redirect("instansi") ; 
 		}else{
 			$this->session->set_userdata("report","maaf akses ditolak");
 			redirect("login") ; 
