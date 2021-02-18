@@ -1,0 +1,1 @@
+ERROR - 2020-10-19 15:41:23 --> Severity: Warning  --> file_get_contents(upload/foto_produk/.png): failed to open stream: No such file or directory C:\xampp\htdocs\allweb\qhomepro.bjhome\application\helpers\default_helper.php 370

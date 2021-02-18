@@ -1,0 +1,13 @@
+.fixed-header tbody {
+    display:block;
+    height:800px;
+    overflow:auto;
+}
+.fixed-header thead, .fixed-header tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+.fixed-header thead {
+    width: calc( 100% - 1em )
+}

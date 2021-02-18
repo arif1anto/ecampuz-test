@@ -1,0 +1,35 @@
+iframe {
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+
+	width: 900px;
+	height: calc(100vh - 100px);
+	background-color: #fff;
+	border: none;
+	box-shadow: 0 0 10px -5px #aaa;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.fab {
+	width: 65px;
+	height: 65px;
+	background-color: #00acd6;
+	border-radius: 50%;
+	box-shadow: 0 6px 10px 0 #666;
+	transition: all 0.1s ease-in-out;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	line-height: 65px;
+	position: fixed;
+	right: 30px;
+	bottom: 25px;
+}
+
+.fab:hover {
+	cursor: pointer;
+	background-color: #007b99;
+	box-shadow: 0 8px 12px 3px #666;
+}

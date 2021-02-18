@@ -1,0 +1,39 @@
+
+
+.wrap { 
+	width:50%; 
+	background:#F0F0F0; 
+	margin:auto;
+	padding: 25px;
+	overflow: hidden;
+}
+
+h1 {
+	text-align: center;
+}
+
+input.nama {
+	font-size:28px; 
+	width:380px;
+}
+.input40 {
+    width: 40%;
+    padding: 5px 10px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border-color: #ffb3b3;
+}
+.input30 {
+    width: 30%;
+    padding: 5px 10px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border-color: #ffb3b3;
+}
+.input20 {
+    width: 20%;
+    padding: 5px 10px;
+    margin: 3px 0;
+    box-sizing: border-box;
+    border-color: #ffb3b3;
+}
